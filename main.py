@@ -4,7 +4,7 @@ from hdfs import send_data_hdfs
 
 if __name__ == "__main__":
     try:
-        os.mkdir(data)
+        os.mkdir("data")
     except:
         pass
 

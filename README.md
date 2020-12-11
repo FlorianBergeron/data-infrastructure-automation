@@ -25,6 +25,14 @@ Récupère les données de Deezer, filtre les données et créer des datasets au
 
 Créé un dossier ```top_hit_parquet``` sur HDFS et envoie le fichier ```top_hit.parquet``` dessus.
 
+## Automatisation
+Début rudimentaire d'automatisation de la solution :
+
+**Cron**
+
+```0 0 * * * /usr/bin/python3 ~/data-infrastructure-automation/api_extract/main.py```
+
+
 ## Pré-Requis
 **Librairies**
 * python 3.7

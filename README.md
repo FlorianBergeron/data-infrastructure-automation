@@ -9,6 +9,9 @@ Projet scolaire
 
 * Mais aussi de repérer les artistes qui arrivent en tendance.
 
+## Architecture
+![Alt text](/architecture.png?raw=true "Architecture")
+
 ## main.py
 
 Pour lancer le projet, il suffit d'éxecuter la commande suivante :

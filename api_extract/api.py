@@ -43,8 +43,11 @@ def get_data_api():
                     'Artist': list_artist,
                     'Title': list_title})
 
-    df.to_parquet('./data/top_hit.parquet',engine='auto', compression='snappy', index=None, partition_cols=None)
-    print(" (+) SUCCESFULLY CREATED \'./data/top_hit.parquet\'!\n")
+    df.to_csv('./data/top_hits.csv', index=None)
+    print(" (+) SUCCESFULLY CREATED \'./data/top_hits.csv\'!\n")
+
+    df.to_parquet('./data/top_hits.parquet', engine='auto', index=None, partition_cols=None)
+    print(" (+) SUCCESFULLY CREATED \'./data/top_hits.parquet\'!\n")
 
     resp = []
     for i in list_no_artiste:
@@ -84,5 +87,7 @@ def get_data_api():
                         'Name':name_artist,
                         'Number of Fan':nb_fan })
 
-    df2.to_parquet('./data/Artist.parquet',engine='auto', compression='gzip', index=None, partition_cols=None)
-    print(" (+) SUCCESFULLY CREATED \'./data/Artist.parquet\'!\n")
+    df2.to_csv('./data/Artists.csv', index=None)
+
+    df2.to_parquet('./data/Artists.parquet',engine='auto', index=None, partition_cols=None)
+    print(" (+) SUCCESFULLY CREATED \'./data/Artists.parquet\'!\n")

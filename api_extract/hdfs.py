@@ -1,7 +1,7 @@
 import os
 
 def send_data_hdfs():
-    filename = "top_hit.parquet"
+    filename = "top_hits.parquet"
     path_file = "./data/"
     folder_name = "top_hits/year=2020/month=12/day=9/" 
 

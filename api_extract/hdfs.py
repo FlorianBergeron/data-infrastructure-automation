@@ -3,7 +3,7 @@ import os
 def send_data_hdfs():
     filename = "top_hit.parquet"
     path_file = "./data/"
-    folder_name = "top_hits" 
+    folder_name = "top_hits/year=2020/month=12/day=9/" 
 
     create_folder = "hdfs dfs -mkdir " + folder_name
     export_dataset = "hdfs dfs -put " + path_file + filename + " " + folder_name
